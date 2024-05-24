@@ -1,0 +1,83 @@
+.pumping {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.pumping::after {
+    content: attr(data-text);
+    position: absolute;
+    background-color: #FC4F4F;
+    border-radius: 10px;
+    padding: 6px 20px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #fff;
+    user-select: none;
+    box-shadow: 0 7px 15px -1px #ccc;
+    transition: transform 100ms ease-in;
+}
+
+.pumping:active::after {
+    transform: scale(0.9);
+}
+
+.pumping::after {
+    animation: pumping 100ms ease-in-out infinite;
+}
+
+@keyframes pumping {
+    50% {
+        transform: scale(0.95);
+    }
+}
+
+.shape {
+    --size: 8px;
+    position: absolute;
+    top: calc(50% - var(--size));
+    left: calc(50% - var(--size));
+    width: calc(var(--size) * 2);
+    height: calc(var(--size) * 2);
+    animation: popup var(--d) cubic-bezier(.08, .56, .53, .98) forwards;
+}
+
+.heart {
+    --size: 6px;
+    background-color: var(--c);
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--c);
+    border-radius: 50%;
+}
+
+.heart::before {
+    left: -50%;
+}
+
+.heart::after {
+    top: -50%;
+}
+
+@keyframes popup {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(var(--x), var(--y)) rotate(var(--r));
+    }
+}

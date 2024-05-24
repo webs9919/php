@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹스로퍼 블로그 - 최신 웹 개발 뉴스와 튜토리얼</title>
+
+    <!-- SEO 메타 태그 -->
+    <meta name="description" content="웹스로퍼 블로그는 최신 웹 개발 뉴스, 튜토리얼, 팁과 트릭을 제공합니다. 웹 개발자들을 위한 필수 정보들을 만나보세요.">
+    <meta name="keywords" content="웹 개발, 웹 디자인, 튜토리얼, HTML, CSS, JavaScript, 프론트엔드, 백엔드">
+    <meta name="author" content="웹스로퍼">
+
+    <!-- 메타 태그 -->
+    <meta property="og:title" content="웹스로퍼 블로그 - 최신 웹 개발 뉴스와 튜토리얼">
+    <meta property="og:description" content="웹스로퍼 블로그는 최신 웹 개발 뉴스, 튜토리얼, 팁과 트릭을 제공합니다. 웹 개발자들을 위한 필수 정보들을 만나보세요.">
+    <meta property="og:image" content="http://webstoryboy.dothome.co.kr/assets/img/webs.jpg">
+    <meta property="og:url" content="http://webstoryboy.dothome.co.kr">
+    <meta property="og:type" content="website">
+
+    <!-- 메타 태그 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="웹스로퍼 블로그 - 최신 웹 개발 뉴스와 튜토리얼">
+    <meta name="twitter:description" content="웹스로퍼 블로그는 최신 웹 개발 뉴스, 튜토리얼, 팁과 트릭을 제공합니다. 웹 개발자들을 위한 필수 정보들을 만나보세요.">
+    <meta name="twitter:image" content="http://webstoryboy.dothome.co.kr/assets/img/webs.jpg">
+
+    <!-- 파비콘 & CSS -->
+    <link rel="icon" type="image/svg+xml" href="../assets/svg/favicon.svg" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- script -->
+    <script type="module" src="../assets/js/main.js"></script>
+</head>
+
+<body>
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">콘텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header" role="banner">
+        <div class="container">
+            <div class="header__inner">
+                <div class="star">
+                    <a href="#"><span class="blind">다크 모드</span></a>
+                </div>
+                <div class="logo">
+                    <h1><a href="main.html">websloper blog</a></h1>
+                </div>
+                <div class="member">
+                    <!-- 로그인 했을때 -->
+                    <ul>
+                        <li class="on">
+                            <a href="#">
+                                <img src="../assets/face/Cute.svg" alt="사진">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <nav class="nav__inner">
+                <ul>
+                    <li><a href="blogRead.html">레퍼런스</a></li>
+                    <li><a href="blogRead2.html">튜토리얼</a></li>
+                    <li><a href="guestRead.html">방명록</a></li>
+                    <li><a href="boardRead.html">공지사항</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main" role="main">
+        <div class="container">
+            <div class="intro__inner blog line-bot">
+                <div class="img"></div>
+                <h2>게시글 작성하기</h2>
+            </div>
+            <!-- //intro__inner -->
+
+            <div class="blog__inner">
+                <div class="left">
+                    <div class="blog__create">
+                        <form action="#" method="post" enctype="multipart/form-data">
+                            <fieldset>
+                                <legend class="blind">게시글 작성하기</legend>
+                                <div>
+                                    <label for="blogCate" class="blind">카테고리</label>
+                                    <select name="blogCate" id="blogCate">
+                                        <option value="레퍼런스">레퍼런스</option>
+                                        <option value="튜토리얼">튜토리얼</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="blogTitle" class="blind">제목</label>
+                                    <input type="text" id="blogTitle" name="blogTitle" placeholder="제목을 적어주세요!"
+                                        class="input-style" required>
+                                </div>
+                                <div>
+                                    <label for="blogCont" class="blind">내용</label>
+                                    <textarea name="blogCont" id="blogCont" placeholder="내용을 적어주세요!"
+                                        required></textarea>
+                                </div>
+                                <div class="file">
+                                    <label for="blogFile" class="blind">파일</label>
+                                    <input type="file" id="blogFile" name="blogFile">
+                                    <p>* jpg, gif, png, webp 파일만 넣을 수 있습니다. 이미지 용량은 1MB를 넘길 수 없습니다.</p>
+                                </div>
+                                <div class="btn">
+                                    <button type="submit" class="btn-style">저장하기</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <!-- //blog__create -->
+                </div>
+                <div class="right">
+                    <article class="blog__intro">
+                        <div class="img">
+                            <a href="mailto:webstroyboy@naver.com"><span class="blind">연락하기</span></a>
+                        </div>
+                        <h3>webstoryboy</h3>
+                        <span>developer</span>
+                        <p>
+                            키보드를 무기로 삼아 코딩의 세계를 평정하는 중입니다. 🥳
+                            프로그래밍 언어를 마스터하고, 새로운 기술을 터득하는 여정을 이 블로그에 담았습니다.
+                        </p>
+                    </article>
+                    <!-- //blog__intro -->
+
+                    <article class="blog__cate">
+                        <h3>카테고리</h3>
+                        <ul>
+                            <li><a href="#">전체글 <span class="num">70</span></a></li>
+                            <li><a href="#">레퍼런스 <span class="num">30</span></a></li>
+                            <li><a href="#">튜토리얼 <span class="num">40</span></a></li>
+                            <li><a href="#">방명록</a></li>
+                            <li><a href="#">공지사항</a></li>
+                        </ul>
+                    </article>
+                    <!-- //blog__cate -->
+
+                    <article class="blog__best">
+                        <h3>인기글</h3>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="../assets/img/card01.jpg" alt="이미지">
+                                    <span>Github 블로그 구글 애드센스 등록하기</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../assets/img/card02.jpg" alt="이미지">
+                                    <span>Github 환경 변수 세팅 및 env 파일 읽어오기</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../assets/img/card03.jpg" alt="이미지">
+                                    <span>GitHub Projects 기초 사용법</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../assets/img/card04.jpg" alt="이미지">
+                                    <span>Github 블로그 댓글 시스템 만들기</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </article>
+                    <!-- //blog__best -->
+
+                    <article class="blog__comment">
+                        <h3>최신 댓글</h3>
+                        <ul>
+                            <li><a href="#">정말 멋있네요!! 멋있네요!! 멋있네요!! 멋있네요!! 멋있네요!!</a></li>
+                            <li><a href="#">좋은 글 감사합니다. 제가 필요한 정보입니다. 감사합니다.</a></li>
+                            <li><a href="#">제가 필요한 정보입니다. 감사합니다.</a></li>
+                            <li><a href="#">이런 글이 필요했어요!</a></li>
+                        </ul>
+                    </article>
+                    <!-- //blog__comment -->
+
+                    <article class="blog__notice">
+                        <h3>공지 사항</h3>
+                        <ul>
+                            <li><a href="#">이번주 스터지는 장소 공지입니다.</a></li>
+                            <li><a href="#">4월 스터디 모집합니다.</a></li>
+                            <li><a href="#">이번주 스터지는 장소 공지입니다.</a></li>
+                            <li><a href="#">2월 스터디 모집합니다.</a></li>
+                        </ul>
+                    </article>
+                    <!-- //blog__notice -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__inner line-top">
+                <div class="left">
+                    <h6>webslopoer Blog</h6>
+                    <p>
+                        재밌게 열심히 만들었습니다.<br>
+                        꼭 끝까지 완성해주세요! 👏<br>
+                        문의사항은 언제든지 <a href="mailto:webstoryboy@naver.com"
+                            class="line-hover">webstoryboy@naver.com</a><br>
+                        항상 감사합니다.(꾸벅)
+                    </p>
+                </div>
+                <div class="right">
+                    <p>Copyright © WEBS Corp. All Rights Reserved.</p>
+                    <div class="sns">
+                        <ul>
+                            <li><a href="#"><span class="blind">인스타그램</span></a></li>
+                            <li><a href="#"><span class="blind">깃헙</span></a></li>
+                            <li><a href="#"><span class="blind">유튜브</span></a></li>
+                            <li><a href="#"><span class="blind">피그마</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/translations/ko.js"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#blogCont'), {
+                language: 'ko'
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+</body>
+
+</html>

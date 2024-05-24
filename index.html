@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹스로퍼 블로그 - 최신 웹 개발 뉴스와 튜토리얼</title>
+
+    <!-- SEO 메타 태그 -->
+    <meta name="description" content="웹스로퍼 블로그는 최신 웹 개발 뉴스, 튜토리얼, 팁과 트릭을 제공합니다. 웹 개발자들을 위한 필수 정보들을 만나보세요.">
+    <meta name="keywords" content="웹 개발, 웹 디자인, 튜토리얼, HTML, CSS, JavaScript, 프론트엔드, 백엔드">
+    <meta name="author" content="웹스로퍼">
+
+    <!-- 메타 태그 -->
+    <meta property="og:title" content="웹스로퍼 블로그 - 최신 웹 개발 뉴스와 튜토리얼">
+    <meta property="og:description" content="웹스로퍼 블로그는 최신 웹 개발 뉴스, 튜토리얼, 팁과 트릭을 제공합니다. 웹 개발자들을 위한 필수 정보들을 만나보세요.">
+    <meta property="og:image" content="http://webstoryboy.dothome.co.kr/assets/img/webs.jpg">
+    <meta property="og:url" content="http://webstoryboy.dothome.co.kr">
+    <meta property="og:type" content="website">
+
+    <!-- 메타 태그 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="웹스로퍼 블로그 - 최신 웹 개발 뉴스와 튜토리얼">
+    <meta name="twitter:description" content="웹스로퍼 블로그는 최신 웹 개발 뉴스, 튜토리얼, 팁과 트릭을 제공합니다. 웹 개발자들을 위한 필수 정보들을 만나보세요.">
+    <meta name="twitter:image" content="http://webstoryboy.dothome.co.kr/assets/img/webs.jpg">
+
+    <!-- 파비콘 -->
+    <link rel="icon" type="image/svg+xml" href="assets/svg/favicon.svg" />
+
+    <!-- 메인 임시 -->
+    <link href="https://websfont.github.io/pyeongChangPeace/pyeongChangPeace.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            text-align: center;
+            background-color: #eee;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #wrap {
+            padding: 5%;
+        }
+
+        #wrap span {
+            font-family: 'pyeongChangPeace';
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        #wrap h1 {
+            font-size: 30px;
+            font-family: 'pyeongChangPeace';
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .menuWrap {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .menuWrap>div {
+            width: 400px;
+            border: 1px solid #000;
+            padding: 20px 30px;
+            width: 400px;
+            font-family: 'pyeongChangPeace';
+            line-height: 1.8;
+        }
+
+        .menuWrap>div h2 {
+            border-bottom: 1px solid #000;
+            font-size: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        .menuWrap>div h3 {
+            text-align: left;
+        }
+
+        .menuWrap>div h3::before {
+            content: '👉 ';
+        }
+
+        .menuWrap>div ul {
+            margin-top: 10px;
+            text-align: left;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .menuWrap>div ul::after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: #ccc;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+        }
+
+        .menuWrap>div li a:hover {
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+
+        @media (max-width: 1000px) {
+            .menuWrap {
+                flex-direction: column;
+            }
+
+            .menuWrap>div {
+                width: 100%;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <span>디자인 + 코딩 + 개발 </span>
+        <h1>풀스택 도전!!! PHP 블로그 사이트 만들기</h1>
+        <div class="menuWrap">
+            <div>
+                <h2>디자인(Figma)</h2>
+                <ul>
+                    <li><a target="_blank" href="_coding/main.html">01. 메인</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>코딩(HTML/CSS)</h2>
+                <ul>
+                    <li><a target="_blank" href="_coding/main.html">01. 메인(main.html)(완료)</a></li>
+                    <li><a target="_blank" href="_coding/card.html">02. 카드 레이아웃(card.html)(완료)</a></li>
+                    <li><a target="_blank" href="_coding/intro.html">03. 인트로 레이아웃(intro.html)(완료)</a></li>
+                </ul>
+                <ul>
+                    <li><a target="_blank" href="_coding/blogRead.html">04. 블로그 리스트(blogRead.html)</a></li>
+                    <li><a target="_blank" href="_coding/blogRead2.html">05. 블로그 리스트2(blogRead.html)</a></li>
+                    <li><a target="_blank" href="_coding/blogView.html">06. 블로그 글보기(blogView.html)</a></li>
+                    <li><a target="_blank" href="_coding/blogCreate.html">07. 블로그 글쓰기(blogCreate.html)</a></li>
+                    <li><a target="_blank" href="_coding/blogCreate.html">08. 블로그 수정하기(blogUpdate.html)</a></li>
+                    <li><a target="_blank" href="_coding/blogCreate.html">09. 블로그 삭제하기(blogDelete.html)</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>개발(PHP)</h2>
+                <ul>
+                    <li><a target="_blank" href="connect/connect.php">01. 디비 접속하기(connect.php)</a></li>
+                    <li><a target="_blank" href="main/copy.php">02. 기본 틀 만들기(copy.php)</a></li>
+                    <li><a target="_blank" href="main/main.php">03. 메인 페이지(main.php)</a></li>
+                </ul>
+                <ul>
+                    <li><a target="_blank" href="create/createMember.php">01. 회원 테이블 만들기</a></li>
+                    <li><a target="_blank" href="create/createComment.php">02. 댓글 테이블 만들기</a></li>
+                    <li><a target="_blank" href="create/createBoard.php">03. 게시판 테이블 만들기</a></li>
+                    <li><a target="_blank" href="create/createBlog.php">04. 블로그 테이블 만들기</a></li>
+                    <li><a target="_blank" href="create/createBlogComment.php">05. 블로그 댓글 테이블 만들기</a></li>
+                    <li><a target="_blank" href="create/createBlogLike.php">06. 블로그 좋아요 테이블 만들기</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a target="_blank" href="join/join1.php">01. 회원가입-이용약관(join1.php)</a></li>
+                    <li><a target="_blank" href="join/join2.php">02. 회원가입-정보입력(join2.php)</a></li>
+                    <li><a target="_blank" href="join/join3.php">03. 회원가입-가입완료(join3.php)</a></li>
+                    <li><a target="_blank" href="login/login.php">04. 로그인(login.php)</a></li>
+                </ul>
+
+                <ul>
+                    <li><a target="_blank" href="blog/blogRead.php">01. 블로그 리스트(blogRead.php)</a></li>
+                    <li><a target="_blank" href="blog/blogCreate.php">02. 블로그 글쓰기(blogCreate.php)</a></li>
+                    <li><a target="_blank" href="blog/blogView.php">03. 블로그 글보기(blogView.php)</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

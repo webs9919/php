@@ -1,0 +1,324 @@
+/* 
+    member__inner 
+    |-- member__title
+    |-- member__form : 로그인
+    |-- member__add
+    |-- member__sub
+    |-- member__policy : 이용약관
+    |-- member__insert : 회원가입
+*/
+
+.member__title {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.member__title h2 {
+    font-size: 34px;
+    font-family: var(--fontG);
+    margin-bottom: 2.5rem;
+    color: var(--black);
+}
+
+.member__title p {
+    font-size: 1.25rem;
+    color: var(--black600);
+    word-break: keep-all;
+    font-weight: 300;
+}
+
+/* 로그인 영역 */
+.member__form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 3.75rem 0;
+}
+
+.member__form input {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.member__form button {
+    padding: 1.2rem 1.4rem;
+    background-color: var(--black);
+    width: 100%;
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+.member__add {
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 1.625rem;
+    color: var(--black600);
+}
+
+.member__add ul {
+    padding-left: 12px;
+}
+
+.member__add li {
+    list-style: disc;
+    word-break: keep-all;
+}
+
+/* 회원가입 이용약관 */
+.member__sub {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.member__sub h2 {
+    font-size: 1.5rem;
+    font-family: var(--fontG);
+    margin-bottom: 1.875rem;
+    color: var(--black);
+}
+
+.member__sub ul {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.member__sub ul::before {
+    content: '';
+    width: 150px;
+    height: 1.7px;
+    background-color: var(--black);
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.member__sub li {
+    margin: 0 16px;
+}
+
+.member__sub li a {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    border: 1.7px solid var(--black);
+    display: inline-block;
+    border-radius: 50%;
+    font-family: var(--fontG);
+    font-size: 1.125rem;
+    background-color: var(--mainColor);
+}
+
+.member__sub li.active a {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* member__policy */
+.member__policy {
+    width: 840px;
+    margin: 0 auto;
+}
+
+.member__policy .agree {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.member__policy .agree .scroll {
+    height: 400px;
+    padding: 1.875rem;
+    background-color: var(--white200);
+    white-space: pre-line;
+    overflow-y: scroll;
+    line-height: 1.7;
+    color: var(--black500);
+    margin-bottom: 8px;
+}
+
+.member__policy .agree .scroll::-webkit-scrollbar {
+    width: 10px;
+}
+
+.member__policy .agree .scroll::-webkit-scrollbar-track {
+    background-color: var(--white300);
+}
+
+.member__policy .agree .scroll::-webkit-scrollbar-thumb {
+    background-color: var(--white600);
+    border-radius: 20px;
+}
+
+.member__policy .agree .scroll::-webkit-scrollbar-button {
+    display: none;
+}
+
+.member__policy .agree .check label {
+    position: relative;
+    padding-left: 1.875rem;
+    cursor: pointer;
+    color: var(--black300);
+}
+
+.member__policy .agree .check input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.member__policy .agree .check .indicator {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: var(--white);
+    position: absolute;
+    left: 0;
+    top: -1px;
+}
+
+.member__policy .agree .check .indicator::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.member__policy .agree .check input:checked~.indicator {
+    background-color: var(--pointColor);
+}
+
+.member__policy .agree .check input:checked~.indicator::after {
+    display: block;
+}
+
+.member__policy .center {
+    text-align: center;
+    margin-top: 80px;
+}
+
+
+/* member__insert */
+.member__insert {
+    max-width: 840px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.member__insert div label {
+    display: block;
+    font-size: 1.25rem;
+    line-height: 1;
+    margin-bottom: 10px;
+    color: var(--black);
+}
+
+.member__insert div .check {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.member__insert div input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.member__insert div .check input {
+    width: 69%;
+}
+
+.member__insert div .check .btn {
+    width: 30%;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.member__insert div .msg {
+    color: var(--pointColor);
+    margin-bottom: 3rem;
+}
+
+.member__insert .center {
+    text-align: center;
+}
+
+.member__end {
+    padding-top: 300px;
+}
+
+.member__end .pumping {
+    position: relative;
+}
+
+.member__end .pumping i {
+    position: absolute;
+    left: 50%;
+    top: -70px;
+    transform: translateX(-50%);
+    z-index: 10000;
+    background-color: var(--black);
+    color: var(--white);
+    font-style: normal;
+    padding: 2px 14px;
+    border-radius: 30px;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.member__end .pumping:hover i {
+    top: -60px;
+    opacity: 1;
+}
+
+.member__end .pumping i::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    transform: translateX(-50%);
+    border-top: 8px solid var(--black);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+}
+
+/* media */
+@media (max-width: 860px) {
+    .member__policy {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .member__form,
+    .member__add {
+        width: 100%;
+    }
+
+    .member__insert div .check {
+        flex-direction: column;
+    }
+
+    .member__insert div .check input {
+        width: 100%;
+    }
+
+    .member__insert div .check .btn {
+        width: 100%;
+    }
+}

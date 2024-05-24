@@ -1,0 +1,87 @@
+:root {
+    --fontN: "nanumSquareNeo";
+    --fontG: "gmarket";
+
+    --mainColor: #eee;
+    --pointColor: #FC4F4F;
+
+    --white: #fff;
+    --white100: #f0f0f0;
+    --white200: #e1e1e1;
+    --white300: #dcdcdc;
+    --white400: #cbcbcb;
+    --white500: #b9b9b9;
+    --white600: #a3a3a3;
+    --white700: #939393;
+
+    --black: #000;
+    --black100: #111;
+    --black200: #222;
+    --black300: #333;
+    --black400: #444;
+    --black500: #555;
+    --black600: #666;
+    --black700: #777;
+
+    /* 기본 폰트 설정 */
+    font-family: var(--fontN);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    /* 아이폰 가로 모드에서 글씨 확대 금지 */
+    -webkit-text-size-adjust: 100%;
+
+    /* 모든 이미지 */
+    --star: url(../svg/star.svg);
+    --snsInsta: url(../svg/sns-insta.svg);
+    --snsGit: url(../svg/sns-git.svg);
+    --snsYoutube: url(../svg/sns-youtube.svg);
+    --snsFigma: url(../svg/sns-figma.svg);
+    --eye: url(../svg/eye.svg);
+    --heart: url(../svg/heart.svg);
+    --arrow: url(../svg/arrow.svg);
+    --mail: url(../svg/mail.svg);
+    --arrowLeft: url(../svg/arrow-left-circle.svg);
+    --arrowRight: url(../svg/arrow-right-circle.svg);
+    --logout: url(../svg/log-out.svg);
+
+    --profile: #eee;
+}
+
+:root[data-darktheme=true] {
+    --mainColor: #1d1d1d;
+    --pointColor: #4ffcfc;
+
+    --black: #fff;
+    --black100: #f0f0f0;
+    --black200: #e1e1e1;
+    --black300: #dcdcdc;
+    --black400: #cbcbcb;
+    --black500: #b9b9b9;
+    --black600: #a3a3a3;
+    --black700: #939393;
+
+    --white: #000;
+    --white100: #111;
+    --white200: #222;
+    --white300: #333;
+    --white400: #444;
+    --white500: #555;
+    --white600: #666;
+    --white700: #777;
+
+    --star: url(../svg/star-dark.svg);
+    --snsInsta: url(../svg/sns-insta-dark.svg);
+    --snsGit: url(../svg/sns-git-dark.svg);
+    --snsYoutube: url(../svg/sns-youtube-dark.svg);
+    --snsFigma: url(../svg/sns-figma-dark.svg);
+
+    --profile: #fff;
+}
+
+@media (max-width: 800px) {
+    :root {
+        font-size: 14px;
+    }
+}

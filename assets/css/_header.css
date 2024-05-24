@@ -1,0 +1,204 @@
+/* header */
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid var(--black);
+    position: relative;
+}
+
+.header__inner::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--black);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: -1;
+}
+
+.header__inner .star {
+    width: 200px;
+}
+
+.header__inner .star a {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid var(--black);
+    border-radius: 50%;
+    background-color: var(--mainColor);
+    margin-top: 5px;
+    background-image: var(--star);
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-out;
+}
+
+.header__inner .star a:hover {
+    background-repeat: repeat;
+    transform: rotate(360deg);
+}
+
+.header__inner .logo {
+    padding: 0.8rem;
+}
+
+.header__inner .logo a {
+    font-size: 1.25rem;
+    font-family: var(--fontG);
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: var(--mainColor);
+    padding: 0 1rem;
+}
+
+.header__inner .member {
+    width: 200px;
+    text-align: right;
+    position: relative;
+}
+
+.header__inner .member ul {
+    display: flex;
+    justify-content: right;
+}
+
+.header__inner .member li.off a {
+    border: 1px solid var(--black);
+    display: inline-block;
+    background-color: var(--mainColor);
+    font-size: 14px;
+    padding: 1px 8px;
+    border-radius: 50px;
+}
+
+.header__inner .member li.off a:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.header__inner .member li.on a {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--black);
+    display: inline-block;
+    background-color: var(--profile);
+    border-radius: 50%;
+}
+
+.header__inner .member .profile {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    z-index: 20000;
+    border: 1px solid #000;
+    background-color: var(--mainColor);
+    text-align: left;
+    width: 260px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.header__inner .member .profile.show {
+    visibility: visible;
+    opacity: 1;
+    top: 40px;
+}
+
+.header__inner .member .profile .title {
+    background-color: var(--white200);
+    padding: 1rem;
+    position: relative;
+}
+
+.header__inner .member .profile .title .id {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.header__inner .member .profile .title .email {
+    font-size: 12px;
+    color: var(--black400);
+}
+
+.header__inner .member .profile .title .logout {
+    position: absolute;
+    right: 20px;
+    top: 24px;
+    width: 30px;
+    height: 30px;
+    background-image: var(--logout);
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1000;
+    display: block;
+    border-radius: 50px;
+    background-color: var(--white300);
+}
+
+.header__inner .member .profile .title .logout:hover {
+    background-color: var(--white400);
+}
+
+.header__inner .member .profile ul {
+    display: block;
+    padding: 1rem;
+}
+
+.header__inner .member .profile li {
+    text-align: left;
+    margin-left: 0;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.header__inner .member .profile li a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.nav__inner {
+    margin-top: -13px;
+    position: relative;
+    z-index: 1000;
+}
+
+.nav__inner ul {
+    display: flex;
+    justify-content: center;
+}
+
+.nav__inner li a {
+    border: 1px solid var(--black);
+    margin: 2px;
+    padding: 1px 2px;
+    background-color: var(--mainColor);
+}
+
+.nav__inner li a:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+@media (max-width: 800px) {
+    .nav__inner {
+        display: none;
+    }
+
+    .header__inner {
+        justify-content: center;
+        border-bottom-width: 2px;
+    }
+
+    .header__inner .member {
+        display: none;
+    }
+
+    .header__inner .star {
+        display: none;
+    }
+}

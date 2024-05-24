@@ -1,0 +1,229 @@
+.card__inner {
+    padding: 80px 0;
+}
+
+.card__style {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card__style .center {
+    border-bottom: 1px solid var(--black600);
+    margin: 0 auto 100px auto;
+}
+
+.card__style .card {
+    width: 32%;
+    margin-bottom: 2%;
+}
+
+.card__style.column4 .card {
+    width: 24%;
+}
+
+.card__style.column3 .card {
+    width: 32%;
+}
+
+.card__style.column2 .card {
+    width: 49%;
+}
+
+.card__style .card .card__img {
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.card__style .card .card__img a::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -50px;
+    bottom: 10px;
+    border-radius: 50%;
+    background-color: var(--black);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: var(--arrow);
+    background-size: 15px;
+    transition: all 0.3s ease-in-out;
+    transform: rotate(760deg);
+}
+
+.card__style .card .card__img a img {
+    filter: saturate(0);
+    transition: all 0.3s;
+}
+
+.card__style .card:hover .card__img a::after {
+    right: 10px;
+    transform: rotate(0);
+}
+
+.card__style .card:hover .card__img a img {
+    filter: saturate(100%);
+}
+
+.card__style .card .card__info {
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+}
+
+.card__style .card .card__info .title h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.card__style .card .card__info .title p {
+    color: var(--black600);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.card__style .card .card__info .detail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__style .card .card__info .detail .author {
+    color: var(--black300);
+}
+
+.card__style .card .card__info .detail .author:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.card__style .card .card__info .detail .date {
+    font-size: 12px;
+    color: var(--black300);
+    background-color: var(--white200);
+    border-radius: 20px;
+    padding: 1px 10px;
+}
+
+.card__style .card .card__info .detail .view {
+    padding-left: 24px;
+    background: var(--eye) no-repeat;
+    background-size: 18px;
+}
+
+.card__style .card .card__info .detail .like {
+    padding-left: 24px;
+    background: var(--heart) no-repeat;
+    background-size: 18px;
+    margin-left: 5px;
+}
+
+.card__style.horizontal .card {
+    display: flex;
+    width: 100%;
+}
+
+.card__style.horizontal .card .card__img {
+    width: 300px;
+    border-radius: 10px 0 0 10px;
+}
+
+.card__style.horizontal .card .card__info {
+    width: calc(100% - 300px);
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+@media (max-width:1200px) {
+    .card__style.column4 .card {
+        width: 32%;
+    }
+}
+
+@media (max-width:960px) {
+    .card__style.column4 .card {
+        width: 49%;
+    }
+
+    .card__style.column3 .card {
+        width: 49%;
+    }
+}
+
+@media (max-width:600px) {
+    .card__style.column4 .card {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .card__style.column3 .card {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .card__style.column2 .card {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+}
+
+.card__style2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 16px;
+}
+
+.card__style2 .card {
+    overflow: hidden;
+}
+
+.card__style2 .card figure {
+    position: relative;
+}
+
+.card__style2 .card figure::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: var(--black);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: var(--arrow);
+    background-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.card__style2 .card figure figcaption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #00000087;
+    backdrop-filter: blur(10px);
+    color: var(--white);
+    padding: 0.8rem 1rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.card__style2 .card:hover figure figcaption {
+    bottom: -100px;
+}

@@ -1,0 +1,96 @@
+/* footer */
+.footer__inner {
+    padding: 2.5rem 0;
+    display: flex;
+}
+
+.footer__inner .left {
+    width: 50%;
+}
+
+.footer__inner .left h6 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: var(--fontG);
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+
+.footer__inner .left p {
+    color: var(--black700);
+}
+
+.footer__inner .left p a {
+    color: var(--black600);
+}
+
+.footer__inner .right {
+    width: 50%;
+    text-align: right;
+}
+
+.footer__inner .right p {
+    color: var(--black700);
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+
+.footer__inner .right .sns ul {
+    display: flex;
+    justify-content: right;
+}
+
+.footer__inner .right .sns li {
+    margin-left: 4px;
+    width: 25px;
+    height: 25px;
+}
+
+.footer__inner .right .sns li a {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: var(--black);
+    border-radius: 50%;
+}
+
+.footer__inner .right .sns li:nth-child(1) a {
+    background-image: var(--snsInsta);
+}
+
+.footer__inner .right .sns li:nth-child(2) a {
+    background-image: var(--snsGit);
+}
+
+.footer__inner .right .sns li:nth-child(3) a {
+    background-image: var(--snsYoutube);
+}
+
+.footer__inner .right .sns li:nth-child(4) a {
+    background-image: var(--snsFigma);
+}
+
+@media (max-width: 800px) {
+    .footer__inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__inner .left {
+        width: 100%;
+    }
+
+    .footer__inner .right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer__inner .right p {
+        margin-top: 6px;
+    }
+
+    .footer__inner .right .sns ul {
+        justify-content: center;
+    }
+}
